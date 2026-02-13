@@ -17,9 +17,9 @@ A simple habit tracker app. You can add habits, list them, update them, and dele
 
 > Images are loaded from the `screenshots/` folder.
 
-![Home](./screenshots/home.png)
-![Analytics](./screenshots/add.png)
-![Setting](./screenshots/edit.png)
+![Home](./screenshots/p1.png)
+![Analytics](./screenshots/p2.png)
+![Setting](./screenshots/p3.png)
 
 ## 🧰 Tech Stack
 
