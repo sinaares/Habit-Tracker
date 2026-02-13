@@ -1,56 +1,58 @@
-# 🚀 HabitFlow - Modern Habit Tracker App
+# Habit Tracker ✅
 
-HabitFlow is a modern, responsive, and fully functional habit tracking application built with **React** and **Tailwind CSS**. It allows users to manage their daily goals with a clean dashboard, visualize their progress with analytics, and persist data using local storage.
+A simple habit tracker app. You can add habits, list them, update them, and delete them.
 
-This project was developed as a final assignment for the Web Development training program, demonstrating proficiency in modern frontend technologies and CRUD operations.
+## 🔗 Live Demo
 
-## 🌟 Features
+- Netlify: **https://698fa836cf3584272100a8c2--habit-tracker-site.netlify.app/**
 
-* **Dashboard Overview:** View active habits and daily progress at a glance.
-* **CRUD Operations:**
-    * **Create:** Add new habits with specific categories (Personal, Work, Health, etc.).
-    * **Read:** List all active habits dynamically.
-    * **Update:** Toggle habit completion status instantly.
-    * **Delete:** Remove habits with a confirmation dialog.
-* **Analytics Page:** Visual statistics showing success rates per category.
-* **Persistent Data:** Uses `localStorage` to save user data even after page refreshes.
-* **Routing:** Multi-page navigation (Dashboard, Analytics, Settings) using React Router.
-* **Responsive Design:** Fully optimized for desktop and mobile devices via Tailwind CSS.
+## ✨ Features
 
-## 🛠️ Tech Stack & Architecture
+- ✅ Add habit
+- 📋 List habits
+- ✏️ Update habit
+- 🗑️ Delete habit
 
-* **Framework:** ReactJS (Vite)
-* **Styling:** Tailwind CSS
-* **Routing:** React Router DOM
-* **State Management:** Context API
-* **Icons:** Heroicons
+## 🖼️ Screenshots
 
-### Project Structure
-The project follows a modular architecture as required by the assignment guidelines:
+> Images are loaded from the `screenshots/` folder.
 
-src/
-├── Components/      # Reusable UI components (HabitForm, HabitItem, Sidebar)
-├── Pages/           # Main application views (Dashboard, Analytics, Settings)
-├── Interfaces/      # Data models and constants (habitTypes.js)
-├── Context/         # Global state management (HabitContext)
-└── App.jsx          # Main application entry point
+![Home](./screenshots/home.png)
+![Analytics](./screenshots/add.png)
+![Setting](./screenshots/edit.png)
 
-🚀 Getting Started
-Follow these steps to run the project locally:
+## 🧰 Tech Stack
 
-1.Clone the repository:
+- Vite
+- Tailwind CSS
+- JavaScript
 
-git clone [https://github.com/your-username/habit-tracker.git](https://github.com/your-username/habit-tracker.git)
-cd habit-tracker
+## 📁 Project Structure
 
-2.Install dependencies
+```
+habit_tracker/
+  public/
+  screenshots/
+  src/
+    Components/
+    Pages/
+    Interfaces/
+```
 
+## 🚀 Getting Started (Local)
+
+```bash
 npm install
-
-3.Run the development server
-
 npm run dev
+```
 
-4.Build for production
+## 🏗️ Build
 
+```bash
 npm run build
+npm run preview
+```
+
+## 🌍 Deployment
+
+This project is deployed on Netlify. Every time you push to GitHub, Netlify can automatically redeploy
