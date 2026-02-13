@@ -1,5 +1,3 @@
-// Proje genelinde kullanılan sabit veriler ve ayarlar
-
 export const CATEGORIES = {
   PERSONAL: "Personal",
   WORK: "Work",
@@ -16,11 +14,11 @@ export const CATEGORY_COLORS = {
   [CATEGORIES.FINANCE]: "bg-emerald-100 text-emerald-800 border-emerald-200"
 };
 
-// Yeni bir alışkanlık oluştururken kullanılacak taslak
+// Helper to build a new habit item
 export const createHabitObject = (text, category) => ({
   id: Date.now(),
   text: text,
   category: category,
   completed: false,
-  createdAt: new Date().toLocaleDateString() // Profesyonel detay: Tarih eklendi
+  createdAt: new Date().toLocaleDateString()
 });

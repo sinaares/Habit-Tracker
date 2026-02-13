@@ -5,7 +5,7 @@ import { CATEGORIES, CATEGORY_COLORS } from '../Interfaces/habitTypes';
 function Analytics() {
   const { habits } = useHabits();
 
-  // Kategori bazlı hesaplama
+  // Build per-category stats from the current habit list
   const stats = Object.values(CATEGORIES).map(cat => {
     const catHabits = habits.filter(h => h.category === cat);
     const total = catHabits.length;

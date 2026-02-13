@@ -1,15 +1,14 @@
 import React from 'react';
-import { CATEGORY_COLORS } from '../Interfaces/habitTypes'; // Renkleri buradan alıyoruz
+import { CATEGORY_COLORS } from '../Interfaces/habitTypes';
 
 function HabitItem({ habit, onToggle, onDelete }) {
-  // Eğer kategori rengi bulunamazsa varsayılan gri olsun
+  // Pick a badge style based on category (fallback to gray)
   const badgeStyle = CATEGORY_COLORS[habit.category] || "bg-gray-100 text-gray-800";
 
   return (
     <div className={`group flex items-center justify-between p-4 hover:bg-slate-50 transition-colors duration-200 ${habit.completed ? 'opacity-50' : ''}`}>
       
       <div className="flex items-center gap-4">
-        {/* Custom Checkbox */}
         <button 
           onClick={() => onToggle(habit.id)}
           className={`w-5 h-5 rounded border flex items-center justify-center transition-all ${habit.completed ? 'bg-indigo-600 border-indigo-600' : 'border-slate-300 hover:border-indigo-400'}`}
@@ -28,12 +27,11 @@ function HabitItem({ habit, onToggle, onDelete }) {
       </div>
 
       <div className="flex items-center gap-3">
-        {/* Kategori Badge */}
         <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border ${badgeStyle}`}>
           {habit.category.toUpperCase()}
         </span>
 
-        {/* Silme Butonu - Sadece hover olunca görünür (opacity-0 group-hover:opacity-100) */}
+        {/* Delete button appears on hover */}
         <button 
           onClick={() => onDelete(habit.id)}
           className="text-slate-300 hover:text-red-500 p-1.5 rounded-md hover:bg-red-50 transition-all opacity-0 group-hover:opacity-100"

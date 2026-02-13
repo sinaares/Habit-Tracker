@@ -1,10 +1,10 @@
 import React from 'react';
 import HabitForm from '../Components/HabitForm';
 import HabitItem from '../Components/HabitItem';
-import { useHabits } from '../Context/HabitContext'; // Context'i import ettik
+import { useHabits } from '../Context/HabitContext';
 
 function Dashboard() {
-  const { habits, addHabit, toggleHabit, deleteHabit } = useHabits(); // Verileri buradan alıyoruz
+  const { habits, addHabit, toggleHabit, deleteHabit } = useHabits();
 
   const completedCount = habits.filter(h => h.completed).length;
   const progress = habits.length > 0 ? Math.round((completedCount / habits.length) * 100) : 0;
@@ -16,7 +16,7 @@ function Dashboard() {
         <p className="text-slate-500">Let's check your progress today.</p>
       </header>
 
-      {/* İlerleme Kartı */}
+      {/* Progress summary */}
       <div className="bg-indigo-600 rounded-2xl p-6 text-white shadow-lg shadow-indigo-200 mb-8 flex items-center justify-between">
          <div>
             <h2 className="text-2xl font-bold mb-1">Your Daily Goals</h2>

@@ -5,18 +5,17 @@ import { createHabitObject } from '../Interfaces/habitTypes';
 const HabitContext = createContext();
 
 export const HabitProvider = ({ children }) => {
-  // Verileri LocalStorage'dan çek
+  // Load initial state from localStorage
   const [habits, setHabits] = useState(() => {
     const saved = localStorage.getItem("habits");
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Her değişimde kaydet
+  // Persist changes
   useEffect(() => {
     localStorage.setItem("habits", JSON.stringify(habits));
   }, [habits]);
 
-  // --- CRUD İşlemleri ---
   const addHabit = (text, category) => {
     setHabits([createHabitObject(text, category), ...habits]);
   };
@@ -29,8 +28,9 @@ export const HabitProvider = ({ children }) => {
     setHabits(habits.filter(h => h.id !== id));
   };
 
+  // Quick reset helper (with confirmation)
   const clearData = () => {
-    if(window.confirm("Are you sure? All data will be lost.")) { // İngilizceleştirdik
+    if(window.confirm("Are you sure? All data will be lost.")) {
         setHabits([]);
     }
   };

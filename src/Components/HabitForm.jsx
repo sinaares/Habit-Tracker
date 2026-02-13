@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { CATEGORIES } from '../Interfaces/habitTypes'; // Interface kullanımı
+import { CATEGORIES } from '../Interfaces/habitTypes';
 
 function HabitForm({ onAdd }) {
   const [text, setText] = useState("");
   const [category, setCategory] = useState(CATEGORIES.PERSONAL);
 
+  // Handles form submit and sends the new habit to parent
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
@@ -14,6 +15,7 @@ function HabitForm({ onAdd }) {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-1 rounded-xl shadow-sm border border-slate-200 flex flex-col sm:flex-row gap-2">
+      {/* Category selector */}
       <select 
         value={category} 
         onChange={(e) => setCategory(e.target.value)}
@@ -24,6 +26,7 @@ function HabitForm({ onAdd }) {
         ))}
       </select>
 
+      {/* Habit text input */}
       <input 
         type="text" 
         className="flex-1 bg-transparent text-slate-800 placeholder:text-slate-400 px-4 py-3 outline-none"

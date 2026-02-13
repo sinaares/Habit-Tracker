@@ -12,10 +12,10 @@ function App() {
       <BrowserRouter>
         <div className="flex min-h-screen bg-slate-50 font-sans">
           
-          {/* Sidebar her zaman solda sabit */}
+          {/* Main navigation */}
           <Sidebar />
 
-          {/* Ana İçerik Alanı - Sağ taraf */}
+          {/* Page content */}
           <main className="flex-1 md:ml-64 transition-all">
             <Routes>
               <Route path="/" element={<Dashboard />} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Sidebar() {
+  // NavLink provides isActive so we can style the active route
   const linkClass = ({ isActive }) => 
     `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium ${
       isActive 
